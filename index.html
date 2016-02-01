@@ -320,6 +320,105 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/01/在命令行上编译本机-C-程序/" itemprop="url">
+                  windows系统中在命令行上编译本机 C++ 程序
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-01T17:40:08+08:00" content="2016-02-01">
+              2016-02-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前提条件：window系统，已安装Visual Studio 2015集成开发环境</p>
+<h2 id="u521B_u5EFA_Visual_C++__u6E90_u6587_u4EF6_u5E76_u5728_u547D_u4EE4_u884C_u4E0A_u5BF9_u5176_u8FDB_u884C_u7F16_u8BD1"><a href="#u521B_u5EFA_Visual_C++__u6E90_u6587_u4EF6_u5E76_u5728_u547D_u4EE4_u884C_u4E0A_u5BF9_u5176_u8FDB_u884C_u7F16_u8BD1" class="headerlink" title="创建 Visual C++ 源文件并在命令行上对其进行编译"></a>创建 Visual C++ 源文件并在命令行上对其进行编译</h2><ol>
+<li><p>打开“<strong>开发人员命令提示</strong>”窗口。（在“<strong>开始</strong>”窗口上，打开“<strong>应用</strong>”。找到Visual Studio 2015，打开“<strong>Visual Studio Tools</strong>”文件夹，然后选择“<strong>开发人员命令提示</strong>”快捷方式。）有关如何打开“命令提示符”窗口以使用命令行工具的详细信息，请参阅<a href="https://msdn.microsoft.com/zh-cn/library/f2ccy3wt" target="_blank" rel="external">为命令行生成设置路径和环境变量</a>。<br>可能需要管理员凭据才能成功编译此演练中的代码，具体取决于计算机的操作系统和配置。若要以管理员身份运行“命令提示符”窗口，请打开“<strong>开发人员命令提示</strong>”的快捷菜单，然后选择“<strong>以管理员身份运行</strong>”。</p>
+</li>
+<li><p>在命令提示符下，输入 notepad basic.cpp。<br>在系统提示是否创建文件时，选择“<strong>是</strong>”。</p>
+</li>
+<li><p>在记事本中，输入这些行</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"This is a native C++ program."</span> &lt;&lt; <span class="built_in">std</span>::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在“<strong>文件</strong>”菜单中，选择“<strong>保存</strong>”。<br>这样就创建了一个 Visual C++ 源文件。</p>
+</li>
+<li><p>在命令提示符下，输入 cl /EHsc basic.cpp。（/EHsc 命令行选项指示编译器启用 C++ 异常处理。有关更多信息，请参见 <a href="https://msdn.microsoft.com/zh-cn/library/1deeycx5" target="_blank" rel="external">/EH（异常处理模型）</a>。）<br>cl.exe 编译器将生成一个包含已编译代码的 .obj 文件，然后运行链接器来创建名为 basic.exe 的可执行程序。（此名称将显示在编译器显示的多行输出信息中。）</p>
+</li>
+<li><p>若要运行 basic.exe 程序，请在命令提示符下，输入 basic。<br>该程序显示以下文本并退出：<br>This is a native C++ program.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/28/Github配置SHH-Key/" itemprop="url">
                   Github配置SHH Key
                 </a>
