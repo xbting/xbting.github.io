@@ -57,31 +57,46 @@
 
 
 
-<meta name="description" content="什么是HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-准备工作
-安装Git
-安装Node.js
+<meta name="description" content="准备工作：
+JDK安装
+Eclipse 安装（包括ADT插件）
+Andorid SDK 下载安装
+Android NDK 下载安装
+注：NDK版本在r7以上之后就集成了Cygwin，而且还是十分精简版，已经不需要单独安装Cygwin
 
-npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm目录通过 npm config ls 可以查看npm配置参数可以执行下面命令来修改默认安装">
+
+
+第一个Demo
+新建一个Android工程，然后在工程上右键点击Android Tools-&amp;gt;Add Native Support… ，然后给我们的.so">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo搭建blog笔记">
-<meta property="og:url" content="http://yoursite.com/2016/01/25/Hexo搭建Blog笔记/index.html">
+<meta property="og:title" content="Eclipse环境下进行Android NDK开发">
+<meta property="og:url" content="http://yoursite.com/2016/02/18/Eclipse环境下进行Android-NDK开发/index.html">
 <meta property="og:site_name" content="xbting自留地">
-<meta property="og:description" content="什么是HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-准备工作
-安装Git
-安装Node.js
+<meta property="og:description" content="准备工作：
+JDK安装
+Eclipse 安装（包括ADT插件）
+Andorid SDK 下载安装
+Android NDK 下载安装
+注：NDK版本在r7以上之后就集成了Cygwin，而且还是十分精简版，已经不需要单独安装Cygwin
 
-npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm目录通过 npm config ls 可以查看npm配置参数可以执行下面命令来修改默认安装">
-<meta property="og:updated_time" content="2016-01-28T02:53:37.833Z">
+
+
+第一个Demo
+新建一个Android工程，然后在工程上右键点击Android Tools-&amp;gt;Add Native Support… ，然后给我们的.so">
+<meta property="og:updated_time" content="2016-02-18T05:34:39.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo搭建blog笔记">
-<meta name="twitter:description" content="什么是HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-准备工作
-安装Git
-安装Node.js
+<meta name="twitter:title" content="Eclipse环境下进行Android NDK开发">
+<meta name="twitter:description" content="准备工作：
+JDK安装
+Eclipse 安装（包括ADT插件）
+Andorid SDK 下载安装
+Android NDK 下载安装
+注：NDK版本在r7以上之后就集成了Cygwin，而且还是十分精简版，已经不需要单独安装Cygwin
 
-npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm目录通过 npm config ls 可以查看npm配置参数可以执行下面命令来修改默认安装">
+
+
+第一个Demo
+新建一个Android工程，然后在工程上右键点击Android Tools-&amp;gt;Add Native Support… ，然后给我们的.so">
 
 
 
@@ -99,7 +114,7 @@ npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm�
   };
 </script>
 
-  <title> Hexo搭建blog笔记 | xbting自留地 </title>
+  <title> Eclipse环境下进行Android NDK开发 | xbting自留地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -219,7 +234,7 @@ npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm�
             
             
               
-                Hexo搭建blog笔记
+                Eclipse环境下进行Android NDK开发
               
             
           </h1>
@@ -231,8 +246,8 @@ npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-25T17:43:13+08:00" content="2016-01-25">
-              2016-01-25
+            <time itemprop="dateCreated" datetime="2016-02-18T11:03:36+08:00" content="2016-02-18">
+              2016-02-18
             </time>
           </span>
 
@@ -257,38 +272,29 @@ npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm�
       
 
       
-        <h2 id="u4EC0_u4E48_u662FHexo"><a href="#u4EC0_u4E48_u662FHexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="u51C6_u5907_u5DE5_u4F5C"><a href="#u51C6_u5907_u5DE5_u4F5C" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
-<li>安装<a href="http://git-scm.com/download/" target="_blank" rel="external">Git</a></li>
-<li><p>安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></p>
-<blockquote>
-<p>npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm目录<br>通过 npm config ls 可以查看npm配置参数<br>可以执行下面命令来修改默认安装路径<br>npm config set prefix “E:\node\node-global”<br>npm config set cache “E:\node\node-cache”</p>
+        <h2 id="u51C6_u5907_u5DE5_u4F5C_uFF1A"><a href="#u51C6_u5907_u5DE5_u4F5C_uFF1A" class="headerlink" title="准备工作："></a>准备工作：</h2><ol>
+<li>JDK安装</li>
+<li>Eclipse 安装（包括ADT插件）</li>
+<li>Andorid SDK 下载安装</li>
+<li>Android NDK 下载安装<blockquote>
+<p>注：NDK版本在r7以上之后就集成了Cygwin，而且还是十分精简版，已经不需要单独安装Cygwin</p>
 </blockquote>
 </li>
-<li><p>安装<a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">Hexo</a></p>
+</ol>
+<h2 id="u7B2C_u4E00_u4E2ADemo"><a href="#u7B2C_u4E00_u4E2ADemo" class="headerlink" title="第一个Demo"></a>第一个Demo</h2><ol>
+<li><p>新建一个Android工程，然后在工程上右键点击Android Tools-&gt;Add Native Support… ，然后给我们的.so文件取个名字，例如我的是：FirstNDK,这时候工程就会多一个jni的文件夹，jni下有Android.mk和FirstNDK.cpp文件。Android.mk是NDK工程的Makefile，FirstNDK.cpp就是NDK的源文件。<br>（关于 Android.mk 的说明可以参考资料：<a href="http://www.cnblogs.com/luxiaofeng54/archive/2011/08/13/2137577.html）" target="_blank" rel="external">http://www.cnblogs.com/luxiaofeng54/archive/2011/08/13/2137577.html）</a><br>JNI接口的命名规范是：Java<em> + 调用该方法的包名(包名的点用代替) + + 调用该接口的类名 + </em> + 方法名，对于实例方法，有两个参数是必要的，一个JNI的环境指针JNIEnv *，另一个是调用该方法的Java实例jobject<br>接下来编辑XS_NDK_01.cpp文件，写一个HelloWorld的demo，代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;jni.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span>&#123;</span><br><span class="line">    <span class="function">jstring </span><br><span class="line">    <span class="title">Java_com_example_firstndk_MainActivity_getStringFromJNI</span><span class="params">(JNIEnv* env, jobject thiz)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="comment">//返回一个字符串给Java层</span></span><br><span class="line">        <span class="keyword">return</span> env-&gt;NewStringUTF(<span class="string">"Hello from JNI."</span>);</span><br><span class="line">        <span class="comment">// return (*env)-&gt;NewStringUTF(env, "Hello from JNI.")</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后在MainActivity调用我们刚刚编写的FirstNDK，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</span><br><span class="line">	Button btn;</span><br><span class="line">	TextView tv;</span><br><span class="line"></span><br><span class="line">	<span class="annotation">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">		setContentView(R.layout.activity_main);</span><br><span class="line">		btn = (Button) findViewById(R.id.button);</span><br><span class="line">		tv = (TextView) findViewById(R.id.text);</span><br><span class="line">		btn.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line"></span><br><span class="line">			<span class="annotation">@Override</span></span><br><span class="line">			<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">				<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">				tv.setText(getStringFromJNI() );</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">native</span> String <span class="title">getStringFromJNI</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span> &#123;</span><br><span class="line">		System.loadLibrary(<span class="string">"FirstNdk"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="u521D_u59CB_u5316"><a href="#u521D_u59CB_u5316" class="headerlink" title="初始化"></a>初始化</h2><p>在本机上建一个目录，例如E:\hexo<br>进入该目录，打开Git Bash,执行下面命令进行初始化<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p>
-<p>Hexo 将会新建所需要的文件，然后执行下面命令进行相关包安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<h2 id="u521B_u5EFA_u65B0_u6587_u7AE0"><a href="#u521B_u5EFA_u65B0_u6587_u7AE0" class="headerlink" title="创建新文章"></a>创建新文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"Hello World"</span></span><br></pre></td></tr></table></figure>
-<p>执行上面命令，就会在\source_posts下生成Hello World.md的Markdown文件，编辑此文件写文章。<br>当然可以直接在\source_posts新建*.md文件</p>
-<h2 id="u751F_u6210_u9759_u6001_u6587_u4EF6"><a href="#u751F_u6210_u9759_u6001_u6587_u4EF6" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<h2 id="u542F_u52A8_u672C_u5730_u670D_u52A1_u5668"><a href="#u542F_u52A8_u672C_u5730_u670D_u52A1_u5668" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 即可查看网站。<br>（4000为预设端口，可在 _config.yml 设定）</p>
-<h2 id="u66F4_u6362Next_u4E3B_u9898"><a href="#u66F4_u6362Next_u4E3B_u9898" class="headerlink" title="更换Next主题"></a>更换<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Next主题</a></h2><h2 id="u90E8_u7F72_u5230Github"><a href="#u90E8_u7F72_u5230Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><ol>
-<li>登录Github，注册用户名yourname，如果第一次使用git，还需要配置SSH Key </li>
-<li>创建New repository，repository名字必须跟你用户名一致如yourname.github.io</li>
-<li><p>修改_config.yml中的deploy字段</p>
-<blockquote>
-<p>deploy:<br>type: git<br>repo: git@github.com:yourname/yourname.github.io.git<br>branch: master</p>
-</blockquote>
-</li>
-<li><p>执行下面命令就能完成部署到到Github</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --deploy</span><br><span class="line">$ hexo deploy --generate</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="Hexo_u5E38_u7528_u547D_u4EE4"><a href="#Hexo_u5E38_u7528_u547D_u4EE4" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><p>hexo n == hexo new        // 创建新文章<br>hexo g == hexo generate   //生产静态文件<br>hexo p == hexo publish    // 发布操草稿<br>hexo s == hexo server     //启动本地服务<br>hexo d == hexo deploy     //发布<br>发布博客：<br>hexo g -d<br>或<br>hexo d -g</p>
+<p>完成了，然后运行。运行时会先编译NDK，然后在编译JAVA代码。</p>
+<h2 id="u95EE_u9898_u4E0E_u89E3_u51B3"><a href="#u95EE_u9898_u4E0E_u89E3_u51B3" class="headerlink" title="问题与解决"></a>问题与解决</h2><h4 id="u95EE_u98981_uFF1A_u7F16_u8BD1_u4E5F_u8BB8_u4F1A_u9047_u5230Unable_to_launch_cygpath-_Is_Cygwin_on_the_path_3F"><a href="#u95EE_u98981_uFF1A_u7F16_u8BD1_u4E5F_u8BB8_u4F1A_u9047_u5230Unable_to_launch_cygpath-_Is_Cygwin_on_the_path_3F" class="headerlink" title="问题1：编译也许会遇到Unable to launch cygpath. Is Cygwin on the path?"></a>问题1：编译也许会遇到Unable to launch cygpath. Is Cygwin on the path?</h4><p>解决方法：<br>1.工程右键，点Properties-&gt;C/C++ Build的Building Settings中去掉Use default build command，然后输入${NDKROOT}/ndk-build.cmd</p>
+<p>2.在C/C++ Build中点击Environment，点Add…添加环境变量NDKROOT，值为NDK的根目录</p>
+<p>3.再编译，问题就解决啦！</p>
+<h4 id="u95EE_u98982_uFF1A_u8FD0_u884C_u65F6_u5D29_u6E83_uFF0C_u9047_u5230java-lang-UnsatisfiedLinkError"><a href="#u95EE_u98982_uFF1A_u8FD0_u884C_u65F6_u5D29_u6E83_uFF0C_u9047_u5230java-lang-UnsatisfiedLinkError" class="headerlink" title="问题2：运行时崩溃，遇到java.lang.UnsatisfiedLinkError"></a>问题2：运行时崩溃，遇到java.lang.UnsatisfiedLinkError</h4><p> 解决方法： 在C++文件中函数定义用extern “C”修饰<br> 原因是：使用extern “C”修饰，编译器会按C语言的方式编译和连接。在C语言中，函数编译之后函数名与C++函数编译之后不同，例如foo(int x, int y),C可能会编译成_foo的名字，而C++因为支持重载，所以会编译成像_foo_int_int这种带参数的函数名。如果是按照C语言的编译方式，调用foo函数是找不到_foo的函数名就会报出函数名找不到的错误。所以要添加extern “C”修饰。</p>
+<h4 id="u95EE_u98983_uFF1AMethod__u2018NewStringUTF_u2019_could_not_be_resolved__u95EE_u9898"><a href="#u95EE_u98983_uFF1AMethod__u2018NewStringUTF_u2019_could_not_be_resolved__u95EE_u9898" class="headerlink" title="问题3：Method ‘NewStringUTF’ could not be resolved 问题"></a>问题3：Method ‘NewStringUTF’ could not be resolved 问题</h4><p>因不想使用extern “C”修饰， 所以将FirstNDK.cpp改为FirstNDK.c，<br>同时将c++写法 env-&gt;NewStringUTF(“HelloWorld from JNI.”) 改为 c写法 (*env)-&gt;NewStringUTF(env, “Hello from JNI.”)<br>遇到Method ‘NewStringUTF’ could not be resolved 问题<br>解决方法：右键工程 property-&gt;C/C++ General-&gt;Code Analysis—&gt;配置当前工程(或者workspace)-&gt;使 method cannot be resolved  不选中(即此项不进行报错 )</p>
 
       
     </div>
@@ -300,17 +306,13 @@ npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/25/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/02/03/Android创建快捷方式和删除快捷方式/" rel="next" title="Android创建快捷方式和删除快捷方式">
+                <i class="fa fa-chevron-left"></i> Android创建快捷方式和删除快捷方式
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/28/Github配置SHH-Key/" rel="prev" title="Github配置SHH Key">
-                Github配置SHH Key <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -424,7 +426,7 @@ npm默认全局安装是将模块安装到 C:\Users\xbting\AppData\Roaming\npm�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EC0_u4E48_u662FHexo"><span class="nav-number">1.</span> <span class="nav-text">什么是Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u51C6_u5907_u5DE5_u4F5C"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u521D_u59CB_u5316"><span class="nav-number">3.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u521B_u5EFA_u65B0_u6587_u7AE0"><span class="nav-number">4.</span> <span class="nav-text">创建新文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u751F_u6210_u9759_u6001_u6587_u4EF6"><span class="nav-number">5.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u542F_u52A8_u672C_u5730_u670D_u52A1_u5668"><span class="nav-number">6.</span> <span class="nav-text">启动本地服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u66F4_u6362Next_u4E3B_u9898"><span class="nav-number">7.</span> <span class="nav-text">更换Next主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u90E8_u7F72_u5230Github"><span class="nav-number">8.</span> <span class="nav-text">部署到Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo_u5E38_u7528_u547D_u4EE4"><span class="nav-number">9.</span> <span class="nav-text">Hexo常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u51C6_u5907_u5DE5_u4F5C_uFF1A"><span class="nav-number">1.</span> <span class="nav-text">准备工作：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u4E00_u4E2ADemo"><span class="nav-number">2.</span> <span class="nav-text">第一个Demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u95EE_u9898_u4E0E_u89E3_u51B3"><span class="nav-number">3.</span> <span class="nav-text">问题与解决</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u95EE_u98981_uFF1A_u7F16_u8BD1_u4E5F_u8BB8_u4F1A_u9047_u5230Unable_to_launch_cygpath-_Is_Cygwin_on_the_path_3F"><span class="nav-number">3.0.1.</span> <span class="nav-text">问题1：编译也许会遇到Unable to launch cygpath. Is Cygwin on the path?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u95EE_u98982_uFF1A_u8FD0_u884C_u65F6_u5D29_u6E83_uFF0C_u9047_u5230java-lang-UnsatisfiedLinkError"><span class="nav-number">3.0.2.</span> <span class="nav-text">问题2：运行时崩溃，遇到java.lang.UnsatisfiedLinkError</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u95EE_u98983_uFF1AMethod__u2018NewStringUTF_u2019_could_not_be_resolved__u95EE_u9898"><span class="nav-number">3.0.3.</span> <span class="nav-text">问题3：Method ‘NewStringUTF’ could not be resolved 问题</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
