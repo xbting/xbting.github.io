@@ -83,7 +83,7 @@ Android NDK 下载安装
 
 第一个Demo
 新建一个Android工程，然后在工程上右键点击Android Tools-&amp;gt;Add Native Support… ，然后给我们的.so">
-<meta property="og:updated_time" content="2016-02-18T05:34:39.087Z">
+<meta property="og:updated_time" content="2016-02-18T05:44:12.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Eclipse环境下进行Android NDK开发">
 <meta name="twitter:description" content="准备工作：
@@ -282,7 +282,7 @@ Android NDK 下载安装
 </li>
 </ol>
 <h2 id="u7B2C_u4E00_u4E2ADemo"><a href="#u7B2C_u4E00_u4E2ADemo" class="headerlink" title="第一个Demo"></a>第一个Demo</h2><ol>
-<li><p>新建一个Android工程，然后在工程上右键点击Android Tools-&gt;Add Native Support… ，然后给我们的.so文件取个名字，例如我的是：FirstNDK,这时候工程就会多一个jni的文件夹，jni下有Android.mk和FirstNDK.cpp文件。Android.mk是NDK工程的Makefile，FirstNDK.cpp就是NDK的源文件。<br>（关于 Android.mk 的说明可以参考资料：<a href="http://www.cnblogs.com/luxiaofeng54/archive/2011/08/13/2137577.html）" target="_blank" rel="external">http://www.cnblogs.com/luxiaofeng54/archive/2011/08/13/2137577.html）</a><br>JNI接口的命名规范是：Java<em> + 调用该方法的包名(包名的点用代替) + + 调用该接口的类名 + </em> + 方法名，对于实例方法，有两个参数是必要的，一个JNI的环境指针JNIEnv *，另一个是调用该方法的Java实例jobject<br>接下来编辑XS_NDK_01.cpp文件，写一个HelloWorld的demo，代码如下：</p>
+<li><p>新建一个Android工程，然后在工程上右键点击Android Tools-&gt;Add Native Support… ，然后给我们的.so文件取个名字，例如我的是：FirstNDK,这时候工程就会多一个jni的文件夹，jni下有Android.mk和FirstNDK.cpp文件。Android.mk是NDK工程的Makefile，FirstNDK.cpp就是NDK的源文件。<br>（关于 Android.mk 的说明可以参考资料：<a href="http://www.cnblogs.com/luxiaofeng54/archive/2011/08/13/2137577.html）" target="_blank" rel="external">http://www.cnblogs.com/luxiaofeng54/archive/2011/08/13/2137577.html）</a><br>JNI接口的命名规范是：Java<em> + 调用该方法的包名(包名的点用代替) + + 调用该接口的类名 + </em> + 方法名，对于实例方法，有两个参数是必要的，一个JNI的环境指针JNIEnv *，另一个是调用该方法的Java实例jobject<br>接下来编辑FirstNDK.cpp文件，写一个FirstNDK的demo，代码如下：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;jni.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span>&#123;</span><br><span class="line">    <span class="function">jstring </span><br><span class="line">    <span class="title">Java_com_example_firstndk_MainActivity_getStringFromJNI</span><span class="params">(JNIEnv* env, jobject thiz)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="comment">//返回一个字符串给Java层</span></span><br><span class="line">        <span class="keyword">return</span> env-&gt;NewStringUTF(<span class="string">"Hello from JNI."</span>);</span><br><span class="line">        <span class="comment">// return (*env)-&gt;NewStringUTF(env, "Hello from JNI.")</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>然后在MainActivity调用我们刚刚编写的FirstNDK，代码如下：</p>
