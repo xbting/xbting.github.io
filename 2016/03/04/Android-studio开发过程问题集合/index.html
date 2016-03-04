@@ -57,16 +57,22 @@
 
 
 
-<meta name="description" content="权限1234&amp;lt;!-- 添加快捷方式 --&amp;gt;  &amp;lt;uses-permission android:name=&quot;com.android.launcher.permission.INSTALL_SHORTCUT&quot; /&amp;gt;  &amp;lt;!-- 移除快捷方式 --&amp;gt;  &amp;lt;uses-permission android:name=&quot;com.android.launcher.pe">
+<meta name="description" content="问题1：aapt “finished with non-zero exit value 1”问题问题描述：
+
+Error:Execution failed for task ‘:base_ac:processReleaseResources’.com.android.ide.common.process.ProcessException:org.gradle.process.internal.Ex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android创建快捷方式和删除快捷方式">
-<meta property="og:url" content="http://yoursite.com/2016/02/03/Android创建快捷方式和删除快捷方式/index.html">
+<meta property="og:title" content="Android studio开发过程问题集合">
+<meta property="og:url" content="http://yoursite.com/2016/03/04/Android-studio开发过程问题集合/index.html">
 <meta property="og:site_name" content="xbting自留地">
-<meta property="og:description" content="权限1234&amp;lt;!-- 添加快捷方式 --&amp;gt;  &amp;lt;uses-permission android:name=&quot;com.android.launcher.permission.INSTALL_SHORTCUT&quot; /&amp;gt;  &amp;lt;!-- 移除快捷方式 --&amp;gt;  &amp;lt;uses-permission android:name=&quot;com.android.launcher.pe">
-<meta property="og:updated_time" content="2016-02-03T08:55:52.232Z">
+<meta property="og:description" content="问题1：aapt “finished with non-zero exit value 1”问题问题描述：
+
+Error:Execution failed for task ‘:base_ac:processReleaseResources’.com.android.ide.common.process.ProcessException:org.gradle.process.internal.Ex">
+<meta property="og:updated_time" content="2016-03-04T05:27:29.363Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android创建快捷方式和删除快捷方式">
-<meta name="twitter:description" content="权限1234&amp;lt;!-- 添加快捷方式 --&amp;gt;  &amp;lt;uses-permission android:name=&quot;com.android.launcher.permission.INSTALL_SHORTCUT&quot; /&amp;gt;  &amp;lt;!-- 移除快捷方式 --&amp;gt;  &amp;lt;uses-permission android:name=&quot;com.android.launcher.pe">
+<meta name="twitter:title" content="Android studio开发过程问题集合">
+<meta name="twitter:description" content="问题1：aapt “finished with non-zero exit value 1”问题问题描述：
+
+Error:Execution failed for task ‘:base_ac:processReleaseResources’.com.android.ide.common.process.ProcessException:org.gradle.process.internal.Ex">
 
 
 
@@ -84,7 +90,7 @@
   };
 </script>
 
-  <title> Android创建快捷方式和删除快捷方式 | xbting自留地 </title>
+  <title> Android studio开发过程问题集合 | xbting自留地 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -204,7 +210,7 @@
             
             
               
-                Android创建快捷方式和删除快捷方式
+                Android studio开发过程问题集合
               
             
           </h1>
@@ -216,8 +222,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-03T14:25:20+08:00" content="2016-02-03">
-              2016-02-03
+            <time itemprop="dateCreated" datetime="2016-03-04T13:00:46+08:00" content="2016-03-04">
+              2016-03-04
             </time>
           </span>
 
@@ -242,9 +248,11 @@
       
 
       
-        <h2 id="u6743_u9650"><a href="#u6743_u9650" class="headerlink" title="权限"></a>权限</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 添加快捷方式 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">uses-permission</span> <span class="attribute">android:name</span>=<span class="value">"com.android.launcher.permission.INSTALL_SHORTCUT"</span> /&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 移除快捷方式 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">uses-permission</span> <span class="attribute">android:name</span>=<span class="value">"com.android.launcher.permission.UNINSTALL_SHORTCUT"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="u521B_u5EFA_u5FEB_u6377_u65B9_u5F0F"><a href="#u521B_u5EFA_u5FEB_u6377_u65B9_u5F0F" class="headerlink" title="创建快捷方式"></a>创建快捷方式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span>  <span class="keyword">void</span> <span class="title">createSystemSwitcherShortCut</span><span class="params">(Activity activity,String shortcutName)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">final</span> Intent addIntent = <span class="keyword">new</span> Intent(</span><br><span class="line">               <span class="string">"com.android.launcher.action.INSTALL_SHORTCUT"</span>);</span><br><span class="line">       <span class="keyword">final</span> Parcelable icon = Intent.ShortcutIconResource.fromContext(</span><br><span class="line">               activity, R.mipmap.ic_launcher); <span class="comment">// 获取快捷键的图标</span></span><br><span class="line">       addIntent.putExtra(<span class="string">"duplicate"</span>, <span class="keyword">false</span>);<span class="comment">//不允许重复创建</span></span><br><span class="line"></span><br><span class="line">       String appClass = activity.getPackageName() + <span class="string">"."</span> +activity.getLocalClassName();</span><br><span class="line">       ComponentName comp = <span class="keyword">new</span> ComponentName(getPackageName(), appClass);</span><br><span class="line">       Intent pending = <span class="keyword">new</span> Intent(Intent.ACTION_MAIN);</span><br><span class="line">       pending.setComponent(comp);</span><br><span class="line"></span><br><span class="line">       addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, shortcutName);<span class="comment">// 快捷方式的标题</span></span><br><span class="line">       addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, icon);<span class="comment">// 快捷方式的图标</span></span><br><span class="line">       addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, pending);<span class="comment">// 快捷方式的动作</span></span><br><span class="line">       activity.sendBroadcast(addIntent);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="u5220_u9664_u5FEB_u6377_u65B9_u5F0F"><a href="#u5220_u9664_u5FEB_u6377_u65B9_u5F0F" class="headerlink" title="删除快捷方式"></a>删除快捷方式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">removeShortcut</span><span class="params">(Activity activity,String shortcutName)</span> </span>&#123;</span><br><span class="line">       Intent intent = <span class="keyword">new</span> Intent(<span class="string">"com.android.launcher.action.UNINSTALL_SHORTCUT"</span>);</span><br><span class="line">       <span class="comment">// 快捷名字</span></span><br><span class="line">       intent.putExtra(Intent.EXTRA_SHORTCUT_NAME, shortcutName);</span><br><span class="line">       String appClass = activity.getPackageName() + <span class="string">"."</span> +activity.getLocalClassName();</span><br><span class="line">       ComponentName comp = <span class="keyword">new</span> ComponentName(getPackageName(), appClass);</span><br><span class="line">       intent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, <span class="keyword">new</span> Intent(Intent.ACTION_MAIN).setComponent(comp));</span><br><span class="line">       <span class="comment">// 发送广播</span></span><br><span class="line">       sendBroadcast(intent);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="u95EE_u98981_uFF1Aaapt__u201Cfinished_with_non-zero_exit_value_1_u201D_u95EE_u9898"><a href="#u95EE_u98981_uFF1Aaapt__u201Cfinished_with_non-zero_exit_value_1_u201D_u95EE_u9898" class="headerlink" title="问题1：aapt “finished with non-zero exit value 1”问题"></a>问题1：aapt “finished with non-zero exit value 1”问题</h2><p>问题描述：</p>
+<blockquote>
+<p>Error:Execution failed for task ‘:base_ac:processReleaseResources’.<br>com.android.ide.common.process.ProcessException:org.gradle.process.internal.ExecException:<br>Process ‘command’d:\Android\sdk\build-tools\23.0.2\aapt.exe’ finished with non-zero exit value 1</p>
+</blockquote>
+<p>解决方式：<br>1.由于build.gradle的兼容包和compileSdkVersion配置不对引起，更改compileSdkVersion值即可，如改为最新的23<br>2.由于自定义控件的属性文件，没有加format值导致，加上format值即解决问题.例如下面这种情况：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">declare-styleable</span> <span class="attribute">name</span>=<span class="value">"abc"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">attr</span> <span class="attribute">name</span>=<span class="value">"border_width"</span> <span class="attribute">format</span>=<span class="value">"dimension"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">attr</span> <span class="attribute">name</span>=<span class="value">"border_color"</span> <span class="attribute">format</span>=<span class="value">"color"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">attr</span> <span class="attribute">name</span>=<span class="value">"type"</span> <span class="attribute">format</span>=<span class="value">"integer"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">attr</span> <span class="attribute">name</span>=<span class="value">"selectedColor"</span>  /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">declare-styleable</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -256,17 +264,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/02/Android动态修改应用icon/" rel="next" title="Android动态修改应用icon">
-                <i class="fa fa-chevron-left"></i> Android动态修改应用icon
+              <a href="/2016/02/18/Eclipse环境下进行Android-NDK开发/" rel="next" title="Eclipse环境下进行Android NDK开发">
+                <i class="fa fa-chevron-left"></i> Eclipse环境下进行Android NDK开发
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/18/Eclipse环境下进行Android-NDK开发/" rel="prev" title="Eclipse环境下进行Android NDK开发">
-                Eclipse环境下进行Android NDK开发 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -380,7 +384,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u6743_u9650"><span class="nav-number">1.</span> <span class="nav-text">权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u521B_u5EFA_u5FEB_u6377_u65B9_u5F0F"><span class="nav-number">2.</span> <span class="nav-text">创建快捷方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5220_u9664_u5FEB_u6377_u65B9_u5F0F"><span class="nav-number">3.</span> <span class="nav-text">删除快捷方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u95EE_u98981_uFF1Aaapt__u201Cfinished_with_non-zero_exit_value_1_u201D_u95EE_u9898"><span class="nav-number">1.</span> <span class="nav-text">问题1：aapt “finished with non-zero exit value 1”问题</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

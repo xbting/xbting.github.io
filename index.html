@@ -189,6 +189,103 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/04/Android-studio开发过程问题集合/" itemprop="url">
+                  Android studio开发过程问题集合
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-04T13:00:46+08:00" content="2016-03-04">
+              2016-03-04
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="u95EE_u98981_uFF1Aaapt__u201Cfinished_with_non-zero_exit_value_1_u201D_u95EE_u9898"><a href="#u95EE_u98981_uFF1Aaapt__u201Cfinished_with_non-zero_exit_value_1_u201D_u95EE_u9898" class="headerlink" title="问题1：aapt “finished with non-zero exit value 1”问题"></a>问题1：aapt “finished with non-zero exit value 1”问题</h2><p>问题描述：</p>
+<blockquote>
+<p>Error:Execution failed for task ‘:base_ac:processReleaseResources’.<br>com.android.ide.common.process.ProcessException:org.gradle.process.internal.ExecException:<br>Process ‘command’d:\Android\sdk\build-tools\23.0.2\aapt.exe’ finished with non-zero exit value 1</p>
+</blockquote>
+<p>解决方式：<br>1.由于build.gradle的兼容包和compileSdkVersion配置不对引起，更改compileSdkVersion值即可，如改为最新的23<br>2.由于自定义控件的属性文件，没有加format值导致，加上format值即解决问题.例如下面这种情况：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">declare-styleable</span> <span class="attribute">name</span>=<span class="value">"abc"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">attr</span> <span class="attribute">name</span>=<span class="value">"border_width"</span> <span class="attribute">format</span>=<span class="value">"dimension"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">attr</span> <span class="attribute">name</span>=<span class="value">"border_color"</span> <span class="attribute">format</span>=<span class="value">"color"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">attr</span> <span class="attribute">name</span>=<span class="value">"type"</span> <span class="attribute">format</span>=<span class="value">"integer"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">attr</span> <span class="attribute">name</span>=<span class="value">"selectedColor"</span>  /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">declare-styleable</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -918,7 +1015,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
